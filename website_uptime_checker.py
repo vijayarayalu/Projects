@@ -5,7 +5,7 @@
 # import smtplib
 # from email.message import EmailMessage
 
-# # ------------------- CONFIG --------------------
+
 
 # websites = [
 #     "https://www.google.com",
@@ -20,7 +20,6 @@
 # EMAIL_PASSWORD = "fyee hccy zxgt oykp"  # Use app password if 2FA is enabled
 # RECEIVER_EMAIL = "vijayarayalu64@gmail.com"
 
-# # ------------------- FUNCTIONS --------------------
 
 # def check_website(url):
 #     try:
@@ -52,7 +51,7 @@
 #     except Exception as e:
 #         print(f"❌ Email sending failed: {e}")
 
-# # ------------------- MAIN LOOP --------------------
+
 
 # print("🔍 Starting Website Uptime Monitor...\n")
 # while True:
@@ -70,7 +69,6 @@ from datetime import datetime
 import smtplib
 from email.message import EmailMessage
 
-# ------------------- CONFIG --------------------
 
 websites = [
     "https://www.google.com",
@@ -88,7 +86,7 @@ RECEIVER_EMAIL = "vijayarayalu64@gmail.com"
 # Keep track of the last known status for each website
 last_status = {url: True for url in websites}  # Assume all are UP initially
 
-# ------------------- FUNCTIONS --------------------
+
 
 def check_website(url):
     try:
@@ -119,7 +117,7 @@ def send_email_alert(url):
     except Exception as e:
         print(f"❌ Email sending failed: {e}")
 
-# ------------------- MAIN LOOP --------------------
+
 
 print("🔍 Starting Website Uptime Monitor...\n")
 
@@ -147,3 +145,4 @@ while True:
 # all_logs = read_logs()
 # for entry in all_logs:
 #     print(entry.strip())
+
