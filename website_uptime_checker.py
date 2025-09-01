@@ -62,7 +62,7 @@
 #             send_email_alert(url)
 #     time.sleep(check_interval)
 
-#sends mail only once that to when the website gets down,u get again mail when the website goes up and then gets down
+#sends mail only once, that to when the website gets down,u get again mail when the website goes up and then gets down
 import requests
 import time
 from datetime import datetime
@@ -145,4 +145,5 @@ while True:
 # all_logs = read_logs()
 # for entry in all_logs:
 #     print(entry.strip())
+
 
