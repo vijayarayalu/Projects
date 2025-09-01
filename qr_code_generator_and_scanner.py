@@ -5,7 +5,7 @@ from tkinter import filedialog, messagebox
 from PIL import Image, ImageTk
 
 
-# ---------------- QR Code Generator ---------------- #
+# QR Code Generator 
 def generate_qr(data, filename="qrcode.png"):
     qr = qrcode.QRCode(version=1, box_size=10, border=4)
     qr.add_data(data)
@@ -15,7 +15,7 @@ def generate_qr(data, filename="qrcode.png"):
     print(f"[INFO] QR Code saved as {filename}")
 
 
-# ---------------- QR Code Scanner (Image) ---------------- #
+#  QR Code Scanner (Image)
 def scan_qr_from_image(image_path):
     img = cv2.imread(image_path)
     detector = cv2.QRCodeDetector()
@@ -26,7 +26,7 @@ def scan_qr_from_image(image_path):
         print("[INFO] No QR code found in the image.")
 
 
-# ---------------- QR Code Scanner (Webcam) ---------------- #
+# QR Code Scanner (Webcam) 
 def scan_qr_from_webcam():
     cap = cv2.VideoCapture(0)
     detector = cv2.QRCodeDetector()
@@ -54,7 +54,7 @@ def scan_qr_from_webcam():
     cv2.destroyAllWindows()
 
 
-# ---------------- Tkinter GUI ---------------- #
+# Tkinter GUI 
 def gui_app():
     def generate_qr_gui():
         data = entry.get()
@@ -92,7 +92,6 @@ def gui_app():
     root.mainloop()
 
 
-# ---------------- Main ---------------- #
 if __name__ == "__main__":
     print("Choose an option:")
     print("1. Generate QR Code")
@@ -114,3 +113,4 @@ if __name__ == "__main__":
         gui_app()
     else:
         print("Invalid choice!")
+
